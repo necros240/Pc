@@ -1,0 +1,97 @@
+{
+	"name": "binary-preview",
+	"displayName": "Binary",
+	"author": {
+		"name": "asurance",
+		"email": "784672616@qq.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/asurance/Binary/issues"
+	},
+	"publisher": "asurance",
+	"icon": "images/icon.png",
+	"description": "binary preview for vscode",
+	"version": "0.0.2",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.binaryPreview"
+	],
+	"keywords": [
+		"binary"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.binaryPreview",
+				"title": "显示二进制预览",
+				"icon": {
+					"light": "images/icon-light.svg",
+					"dark": "images/icon-dark.svg"
+				}
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.binaryPreview",
+					"group": "navigation"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "extension.binaryPreview",
+					"group": "navigation"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "extension.binaryPreview",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "extension.binaryPreview",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/asurance/Binary"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "b64d2a63-52b8-4705-a10e-461d48a21d62",
+		"publisherId": "9acd0e28-7404-4dce-81c4-3858a37e5fa0",
+		"publisherDisplayName": "asurance",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1713246041541,
+		"pinned": false,
+		"source": "gallery"
+	}
+}
